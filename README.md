@@ -1,2 +1,2 @@
 # johnAula
-Que começe os jogos!!!
+Que começem os jogos!!!
