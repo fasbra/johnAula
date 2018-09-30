@@ -7,10 +7,12 @@ import validador.impl.ValidadorEvento;
 
 public class ValidadorEventoTest {
 	
-	private ValidadorEvento validator;
+	private ValidadorEvento validador;
 	
 	@Before
 	public void setUp() throws Exception {
-		validator = new ValidadorEvento();
+		validador = new ValidadorEvento();
 	}
+	
+	
 }
