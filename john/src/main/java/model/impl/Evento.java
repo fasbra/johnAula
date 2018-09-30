@@ -1,14 +1,14 @@
 package model.impl;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Evento {
 	
 	public String Nome;
 	
-	public Date DataEvento;
+	public LocalDate DataEvento;
 	
-	public Evento(String nome, Date data) {
+	public Evento(String nome, LocalDate data) {
 		this.Nome = nome;
 		this.DataEvento = data;
 	}
@@ -17,7 +17,7 @@ public class Evento {
 		return Nome;
 	}
 
-	public Date getDataEvento() {
+	public LocalDate getDataEvento() {
 		return DataEvento;
 	}
 
