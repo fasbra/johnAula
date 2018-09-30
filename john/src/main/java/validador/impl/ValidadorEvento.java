@@ -9,13 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 import model.impl.Evento;
 import validador.Validador;
 
-public class ValidadorEvento implements Validador {
-
-	private Evento _evento;
-	
-	public ValidadorEvento(Evento evento) {
-		this._evento = evento;
-	}
+public class ValidadorEvento implements Validador<Evento> {
 	
 	private static final String MENSAGEM_CAMPO_NOME_OBRIGATORIO = "Campo Nome do Evento não informado"; 
 	private static final String MENSAGEM_CAMPO_NOME_TAMANHO_MAXIMO = "O campo Nome tem um tamanho de no máximo 150 caracteres"	;
@@ -26,31 +20,33 @@ public class ValidadorEvento implements Validador {
 	private static final int TAMANHO_MAXIMO_CAMPO_NOME = 150;
 	private static final LocalDate HOJE = LocalDate.now();
 	
-	public void valida() {
-		validaNomeObrigatorio();
-		validaDataObrigatoria();
+	public void valida(Evento evento) {
+		validaNomeObrigatorio(evento);
+		validaDataObrigatoria(evento);
+		validaTamanhoMaximoNome(evento);
+		validaDataMaiorQueDataAtual(evento);
 	}
 	
-	private void validaNomeObrigatorio() {
-		if(StringUtils.isEmpty(_evento.getNome())){
+	public void validaNomeObrigatorio(Evento evento) {
+		if(StringUtils.isEmpty(evento.getNome())){
 			throw new campoObrigatorioException(MENSAGEM_CAMPO_NOME_OBRIGATORIO);
 		}		
 	}
 	
-	private void validaDataObrigatoria() {		
-		if(_evento.getDataEvento() == null){
+	public void validaDataObrigatoria(Evento evento) {		
+		if(evento.getDataEvento() == null){
 			throw new campoObrigatorioException(MENSAGEM_CAMPO_DATA_OBRIGATORIO);
 		}		
 	}
 	
-	private void validaTamanhoMaximoNome() {
-		if(_evento.getNome().length() > TAMANHO_MAXIMO_CAMPO_NOME ) {
+	public void validaTamanhoMaximoNome(Evento evento) {
+		if(evento.getNome().length() > TAMANHO_MAXIMO_CAMPO_NOME ) {
 			throw new regraNegocioException(MENSAGEM_CAMPO_NOME_TAMANHO_MAXIMO);
 		}
 	}
 	
-	private void validaDataMaiorQueDataAtual() {
-		if(_evento.getDataEvento().isBefore(HOJE)) {
+	public void validaDataMaiorQueDataAtual(Evento evento) {
+		if(evento.getDataEvento().isBefore(HOJE)) {
 			throw new regraNegocioException(MENSAGEM_CAMPO_DATA_MENOR_QUE_HOJE);
 		}
 	}

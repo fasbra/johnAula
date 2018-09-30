@@ -1,7 +1,7 @@
 package validador;
 
-public interface Validador {
+public interface Validador<T> {
 	
-	public void valida();
+	public void valida(T obj);
 	
 }
