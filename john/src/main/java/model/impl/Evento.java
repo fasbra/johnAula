@@ -8,6 +8,10 @@ public class Evento {
 	
 	public LocalDate DataEvento;
 	
+	public Evento() {
+		
+	}
+	
 	public Evento(String nome, LocalDate data) {
 		this.Nome = nome;
 		this.DataEvento = data;
