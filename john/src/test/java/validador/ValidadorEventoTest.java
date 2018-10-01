@@ -32,7 +32,7 @@ public class ValidadorEventoTest {
 	
 	@Test(expected = CampoObrigatorioException.class)
 	public void DeveGerarCampoObrigatorioExceptionQuandoDataForNula() {
-		Evento evento = new Evento("", null);
+		Evento evento = new Evento();
 		
 		validador.validaDataObrigatoria(evento);		
 	}
