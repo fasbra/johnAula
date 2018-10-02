@@ -47,12 +47,14 @@ public class ValidadorEventoTest {
 		validador.validaDataObrigatoria(evento);		
 	}
 	
+	@Test
 	public void deveValidarNomeSemGerarExecao() {
 		Evento evento = new Evento("Teste", null);
 		
 		validador.validaNomeObrigatorio(evento);
 	}
 	
+	@Test
 	public void deveInformarMensagemDaExeceptionCorretamentaParaNomeComCaracteresAlemDoMaximoPermitido() {
 		Evento evento = new Evento(RandomStringUtils.random(151), null);
 		
@@ -64,6 +66,7 @@ public class ValidadorEventoTest {
 		}
 	}
 	
+	@Test
 	public void deveGerarExcecaoQuandoDataDoEventoMenorQueDataAtual() {
 		LocalDate ontem = LocalDate.now().minusDays(1);
 		Evento evento = new Evento("teste", ontem);
@@ -76,6 +79,7 @@ public class ValidadorEventoTest {
 		}
 	}
 	
+	@Test
 	public void deveValidarDataAtualSemGerarExcecao() {
 		LocalDate hoje = LocalDate.now();
 		Evento evento = new Evento("teste", hoje);
@@ -83,6 +87,7 @@ public class ValidadorEventoTest {
 		validador.validaDataMaiorQueDataAtual(evento);
 	}
 	
+	@Test
 	public void deveValidarDataFuturaSemGerarExcecao() {
 		LocalDate amanha = LocalDate.now().plusDays(1);
 		Evento evento = new Evento("teste", amanha);
