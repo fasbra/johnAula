@@ -1,16 +1,13 @@
 package validador;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import java.time.LocalDate;
 
-import static org.junit.Assert.assertEquals;
-
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
-
-
 
 import exception.CampoObrigatorioException;
 import exception.RegraNegocioException;
@@ -28,7 +25,8 @@ public class ValidadorEventoTest {
 	
 	@Test(expected = CampoObrigatorioException.class)
 	public void deveGerarCampoObrigatorioExceptionQuandoNomeForNula() {
-		Evento evento = new Evento();
+		LocalDate hoje = LocalDate.now();
+		Evento evento = new Evento(null,hoje);
 		
 		validador.validaNomeObrigatorio(evento);		
 	}

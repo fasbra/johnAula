@@ -4,7 +4,6 @@ public class validaCampos {
 
 	public void validaCampo(String campo) {
 
-		System.out.println("método teste");
 	}
 
 	public void validaCampoNome(String nome) {

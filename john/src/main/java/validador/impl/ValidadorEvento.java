@@ -5,7 +5,8 @@ import exception.RegraNegocioException;
 
 import java.time.LocalDate;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
+
 import model.impl.Evento;
 import validador.Validador;
 
