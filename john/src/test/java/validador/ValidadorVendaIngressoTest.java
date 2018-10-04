@@ -1,11 +1,15 @@
 package validador;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 import java.time.LocalDate;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import exception.CampoObrigatorioException;
+import exception.RegraNegocioException;
 import model.impl.Evento;
 import model.impl.VendaIngresso;
 import validador.impl.ValidadorVendaIngresso;;
@@ -39,15 +43,25 @@ public class ValidadorVendaIngressoTest {
 	
 	@Test
 	public void deveInformarMensagemDaExceptionCorretamenteParaPeriodoInvalido() {
+		VendaIngresso vendaIngresso = new VendaIngresso(null);
+		
+		try {
+			validador.validaPeriodoComDataInicialMenorQueDataFinal(vendaIngresso);
+			fail("Deve apresentar exception");
+		}catch (RegraNegocioException e) {
+			assertEquals("A data de início de venda deve ser inferior a data de fim", e.getMessage());
+		}
 	}
 	
 	@Test
 	public void deveValidarPeriodoSemGerarExecao() {
-	
+		VendaIngresso vendaIngresso = new VendaIngresso(null);
+		validador.validaPeriodoComDataInicialMenorQueDataFinal(vendaIngresso);
 	}
 	
 	@Test
 	public void deveValidarIngressosDaVendaSemGerarExcecao() {
-		
+		VendaIngresso vendaIngresso = new VendaIngresso(null);
+		validador.validaIngressosAVenda(vendaIngresso);
 	}
 }
