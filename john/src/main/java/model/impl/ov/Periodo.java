@@ -11,6 +11,11 @@ public class Periodo {
 		this.dataInicial = dataInicial;
 		this.dataFinal = dataFinal;
 	}
+	
+	public Periodo(LocalDate dataInicial, int diasDeVenda) {
+		this.dataInicial = dataInicial;
+		this.dataFinal = dataInicial.plusDays(diasDeVenda);
+	}
 
 	public LocalDate getDataInicial() {
 		return dataInicial;
