@@ -1,6 +1,6 @@
 #language:pt
 
-FDISPONIBILIZAR VÁRIOS TIPOS DE INGRESSOS
+DISPONIBILIZAR VÁRIOS TIPOS DE INGRESSOS
 
 Como gestor de eventos
 Quero  para cada evento disponibilizar variados tipos de ingressos com período de vendas
