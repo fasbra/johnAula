@@ -17,17 +17,26 @@ public class VendaIngresso {
 		this.periodoDeVendaDeIngresso = periodoDeVenda;
 	}
 	
-	public void alteraDataFinalVendaIngresso(LocalDate novaDataFinal) {
+	public void alteraDataFinalVendaIngresso(LocalDate novaDataFinal, Evento evento) {
 		Periodo novoPeriodo = new Periodo(this.periodoDeVendaDeIngresso.getDataInicial(), novaDataFinal);
 		this.periodoDeVendaDeIngresso = novoPeriodo;
+		this.evento = evento;
 	}
 	
-	private static void inicioVendaDeIngresso() {
-
+	public void adicionaIngressoParaVenda(Ingresso ingresso) {
+		ingressosDisponiveis.add(ingresso);
 	}
 
-	private static void fimDeVendaDeIngresso() {
+	public Periodo getPeriodoDeVendaDeIngresso() {
+		return periodoDeVendaDeIngresso;
+	}
 
+	public Evento getEvento() {
+		return evento;
+	}
+
+	public List<Ingresso> getIngressosDisponiveis() {
+		return ingressosDisponiveis;
 	}
 
 }
