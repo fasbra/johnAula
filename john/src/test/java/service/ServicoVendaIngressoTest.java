@@ -1,5 +1,7 @@
 package service;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.initMocks;
@@ -49,9 +51,10 @@ public class ServicoVendaIngressoTest {
 		
 		servico.create(venda, ingressosParaVenda);
 		
-		verify(servico, times(1)).incluiVariosIngressos(venda, ingressosParaVenda);
 		verify(validador, times(1)).valida(venda);
 		verify(dao, times(1)).salvar(venda);
+		
+		assertEquals(venda.getIngressosDisponiveis().size() , ingressosParaVenda.size());
 	}
 	
 	@Test
@@ -60,9 +63,8 @@ public class ServicoVendaIngressoTest {
 		
 		servico.create(venda, ingressosParaVenda);
 		Ingresso ingresso = new IngressoPlateiaVip();
-		servico.incluiIngresso(venda, new IngressoPlateiaVip());
+		servico.incluiIngresso(venda, ingresso);
 		
-		verify(servico, times(1)).incluiIngresso(venda, ingresso);
-		verify(validador, times(1)).valida(venda);
+		assertTrue(venda.getIngressosDisponiveis().contains(ingresso));
 	}
 }
