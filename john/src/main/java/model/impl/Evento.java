@@ -4,25 +4,24 @@ import java.time.LocalDate;
 
 public class Evento {
 	
-	public String Nome;
-	
-	public LocalDate DataEvento;
+	private String nome;	
+	private LocalDate dataEvento;
 	
 	public Evento() {
 		
 	}
 	
 	public Evento(String nome, LocalDate data) {
-		this.Nome = nome;
-		this.DataEvento = data;
+		this.nome = nome;
+		this.dataEvento = data;
 	}
 		
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public LocalDate getDataEvento() {
-		return DataEvento;
+		return dataEvento;
 	}
 
 }

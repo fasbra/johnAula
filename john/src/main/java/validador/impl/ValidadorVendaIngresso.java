@@ -2,16 +2,11 @@ package validador.impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.commons.lang.NotImplementedException;
 import exception.CampoObrigatorioException;
 import exception.RegraNegocioException;
 import model.Ingresso;
-import model.impl.Evento;
-import model.impl.IngressoBackStage;
 import model.impl.VendaIngresso;
 import model.impl.TipoIngresso;
 import validador.Validador;
