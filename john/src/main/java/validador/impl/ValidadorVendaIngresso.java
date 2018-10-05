@@ -13,7 +13,8 @@ public class ValidadorVendaIngresso {
 	private static final String PERIODO_OBRIGATORIO = "Período de venda obrigatório.";
 	private static final String EVENTO_OBRIGATORIO = "Evento obrigatório para venda de ingresso.";
 
-	private static final String DATA_FINAL_EVENTO_ANTERIOR_DATA_INICIAL = "A data final deve ser maior ou igual a data inicial do evento";
+	private static final String DATA_FINAL_EVENTO_ANTERIOR_DATA_INICIAL = "A data de início de venda deve ser inferior a data de fim";
+	private static final String SEM_INGRESSOS_DISPONIVEIS = "Evento não possuí ingressos há venda.";
 
 	public void validaPeriodoObrigatorio(VendaIngresso vendaIngresso) {
 		if (vendaIngresso.getPeriodoDeVendaDeIngresso() == null) {
@@ -28,9 +29,9 @@ public class ValidadorVendaIngresso {
 	}
 
 	public void validaIngressoAdicionadoAVenda(VendaIngresso vendaIngresso) {
-		Ingresso ingresso = new IngressoBackStage();
-		vendaIngresso.adicionaIngressoParaVenda(ingresso);
-		throw new NotImplementedException();
+		if (vendaIngresso.getIngressosDisponiveis() == null) {
+			throw new RegraNegocioException(SEM_INGRESSOS_DISPONIVEIS);
+		}
 	}
 
 	public void validaPeriodoComDataInicialAnteriorADataFinal(VendaIngresso vendaIngresso) {
@@ -43,8 +44,9 @@ public class ValidadorVendaIngresso {
 	}
 
 	public void validaIngressosAVenda(VendaIngresso vendaIngresso) {
-		// TODO Auto-generated method stub
-		throw new NotImplementedException();
+		if (vendaIngresso.getIngressosDisponiveis() == null) {
+			throw new RegraNegocioException(SEM_INGRESSOS_DISPONIVEIS);
+		}
 	}
 
 }
