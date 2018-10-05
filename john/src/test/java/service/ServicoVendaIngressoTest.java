@@ -46,7 +46,7 @@ public class ServicoVendaIngressoTest {
 	}
 	
 	@Test
-	public void AsseguraAValidacaoESalvamentoQuandoCriarUmaVendaComTiposDeIngresso() {
+	public void asseguraAValidacaoESalvamentoQuandoCriarUmaVendaComTiposDeIngresso() {
 		VendaIngresso venda = new VendaIngresso(periodo);
 		
 		servico.create(venda, ingressosParaVenda);
@@ -58,7 +58,7 @@ public class ServicoVendaIngressoTest {
 	}
 	
 	@Test
-	public void AsseguraAIncusaoDeNovosIngressosEValidaVenda() {
+	public void asseguraAIncusaoDeNovosIngressosEValidaVenda() {
 		VendaIngresso venda = new VendaIngresso(periodo);
 		
 		servico.create(venda, ingressosParaVenda);
