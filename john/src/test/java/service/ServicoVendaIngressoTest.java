@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import dao.Dao;
 import model.Ingresso;
 import model.impl.IngressoPlateia;
+import model.impl.IngressoPlateiaVip;
 import model.impl.IngressoVip;
 import model.impl.VendaIngresso;
 import model.impl.ov.Periodo;
@@ -51,5 +52,17 @@ public class ServicoVendaIngressoTest {
 		verify(servico, times(1)).incluiVariosIngressos(venda, ingressosParaVenda);
 		verify(validador, times(1)).valida(venda);
 		verify(dao, times(1)).salvar(venda);
+	}
+	
+	@Test
+	public void AsseguraAIncusaoDeNovosIngressosEValidaVenda() {
+		VendaIngresso venda = new VendaIngresso(periodo);
+		
+		servico.create(venda, ingressosParaVenda);
+		Ingresso ingresso = new IngressoPlateiaVip();
+		servico.incluiIngresso(venda, new IngressoPlateiaVip());
+		
+		verify(servico, times(1)).incluiIngresso(venda, ingresso);
+		verify(validador, times(1)).valida(venda);
 	}
 }
