@@ -3,6 +3,7 @@ package model.impl;
 import model.impl.ov.Periodo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Ingresso;
@@ -13,14 +14,13 @@ public class VendaIngresso {
 	private Evento evento;
 	private List<Ingresso> ingressosDisponiveis;
 	
-	public VendaIngresso(Periodo periodoDeVenda) {
-		this.periodoDeVendaDeIngresso = periodoDeVenda;
+	private void inicializa() {
+		this.ingressosDisponiveis = new ArrayList<Ingresso>();
 	}
 	
-	public void alteraDataFinalVendaIngresso(LocalDate novaDataFinal, Evento evento) {
-		Periodo novoPeriodo = new Periodo(this.periodoDeVendaDeIngresso.getDataInicial(), novaDataFinal);
-		this.periodoDeVendaDeIngresso = novoPeriodo;
-		this.evento = evento;
+	public VendaIngresso(Periodo periodoDeVenda) {
+		inicializa();
+		this.periodoDeVendaDeIngresso = periodoDeVenda;
 	}
 	
 	public void adicionaIngressoParaVenda(Ingresso ingresso) {
