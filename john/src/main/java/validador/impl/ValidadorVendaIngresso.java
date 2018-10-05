@@ -1,12 +1,11 @@
 package validador.impl;
 
 import java.time.LocalDate;
-import java.util.Date;
-
 import org.apache.commons.lang.NotImplementedException;
 import exception.CampoObrigatorioException;
 import exception.RegraNegocioException;
-import model.impl.Evento;
+import model.Ingresso;
+import model.impl.IngressoBackStage;
 import model.impl.VendaIngresso;
 
 public class ValidadorVendaIngresso {
@@ -29,7 +28,8 @@ public class ValidadorVendaIngresso {
 	}
 
 	public void validaIngressoAdicionadoAVenda(VendaIngresso vendaIngresso) {
-		// TODO Auto-generated method stub
+		Ingresso ingresso = new IngressoBackStage();
+		vendaIngresso.adicionaIngressoParaVenda(ingresso);
 		throw new NotImplementedException();
 	}
 
