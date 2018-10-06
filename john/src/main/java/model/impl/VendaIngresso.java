@@ -23,6 +23,10 @@ public class VendaIngresso {
 		this.periodoDeVendaDeIngresso = periodoDeVenda;
 	}
 	
+	public void informaEvento(Evento evento) {
+		this.evento = evento;
+	}
+	
 	public void informaPeriodoDeVenda(Periodo periodo) {
 		this.periodoDeVendaDeIngresso = periodo;
 	}
