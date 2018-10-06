@@ -12,10 +12,10 @@ import validador.Validador;
 
 public class ValidadorEvento implements Validador<Evento> {
 	
-	private static final String MENSAGEM_CAMPO_NOME_OBRIGATORIO = "Campo Nome do Evento não informado"; 
-	private static final String MENSAGEM_CAMPO_NOME_TAMANHO_MAXIMO = "O campo Nome tem um tamanho de no máximo 150 caracteres"	;
+	private static final String MENSAGEM_CAMPO_NOME_OBRIGATORIO = "Campo Nome do Evento nao informado"; 
+	private static final String MENSAGEM_CAMPO_NOME_TAMANHO_MAXIMO = "O campo Nome tem um tamanho de no maximo 150 caracteres"	;
 	
-	private static final String MENSAGEM_CAMPO_DATA_OBRIGATORIO = "Camo Data do Evento não informado";
+	private static final String MENSAGEM_CAMPO_DATA_OBRIGATORIO = "Camo Data do Evento nao informado";
 	private static final String MENSAGEM_CAMPO_DATA_MENOR_QUE_HOJE = "A data deve ser maior ou igual a data atual";
 	
 	private static final int TAMANHO_MAXIMO_CAMPO_NOME = 150;

@@ -13,11 +13,11 @@ import validador.Validador;
 
 public class ValidadorVendaIngresso implements Validador<VendaIngresso> {
 
-	private static final String PERIODO_OBRIGATORIO = "Período de venda obrigatório.";
-	private static final String EVENTO_OBRIGATORIO = "Evento obrigatório para venda de ingresso.";
+	private static final String PERIODO_OBRIGATORIO = "Periodo de venda obrigatorio.";
+	private static final String EVENTO_OBRIGATORIO = "Evento obrigatorio para venda de ingresso.";
 
-	private static final String DATA_FINAL_EVENTO_ANTERIOR_DATA_INICIAL = "A data de início de venda deve ser inferior a data de fim";
-	private static final String SEM_INGRESSOS_DISPONIVEIS = "Evento não possuí ingressos há venda.";
+	private static final String DATA_FINAL_EVENTO_ANTERIOR_DATA_INICIAL = "A data de inicio de venda deve ser inferior a data de fim";
+	private static final String SEM_INGRESSOS_DISPONIVEIS = "Evento nao possui ingressos ha venda.";
 	private static final String INGRESSO_DUPLICADO = "Venda com ingressos duplicados.";
 
 	public void valida(VendaIngresso vendaIngresso) {

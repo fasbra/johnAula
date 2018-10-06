@@ -12,7 +12,7 @@ public class validaCampos {
 	}
 
 	public void validaCampoData(String data) {
-		System.out.println("método teste");
+		System.out.println("metodo teste");
 
 	}
 

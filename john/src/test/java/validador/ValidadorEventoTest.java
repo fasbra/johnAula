@@ -60,7 +60,7 @@ public class ValidadorEventoTest {
 			validador.validaTamanhoMaximoNome(evento);
 			fail("Deve apresentar exception");
 		}catch (RegraNegocioException e) {
-			assertEquals("O campo Nome tem um tamanho de no máximo 150 caracteres", e.getMessage());
+			assertEquals("O campo Nome tem um tamanho de no maximo 150 caracteres", e.getMessage());
 		}
 	}
 	
