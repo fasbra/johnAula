@@ -1,5 +1,13 @@
 package model.impl.desconto;
 
-public class EstudanteDesconto {
+import model.Desconto;
+
+public class EstudanteDesconto implements Desconto {
+
+	@Override
+	public double getDesconto() {
+		return 0.5;
+	}
+	
 
 }

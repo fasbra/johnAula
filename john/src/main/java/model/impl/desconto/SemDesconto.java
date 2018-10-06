@@ -1,5 +1,14 @@
 package model.impl.desconto;
 
-public class SemDesconto {
+import model.Desconto;
+
+public class SemDesconto implements Desconto {
+
+	@Override
+	public double getDesconto() {
+
+		return 0;
+		
+	}
 
 }
