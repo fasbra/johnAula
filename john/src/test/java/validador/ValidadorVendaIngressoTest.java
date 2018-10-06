@@ -68,7 +68,7 @@ public class ValidadorVendaIngressoTest {
 		try {
 			validador.validaIngressoAdicionadosAVenda(vendaIngresso);
 		} catch (Exception e) {
-			assertEquals("Evento não possuí ingressos há venda.", e.getMessage());
+			assertEquals("Evento nao possui ingressos ha venda.", e.getMessage());
 		}
 	}
 
@@ -80,7 +80,7 @@ public class ValidadorVendaIngressoTest {
 			validador.validaPeriodoComDataInicialAnteriorADataFinal(vendaIngresso);
 			fail("Deve apresentar exception");
 		} catch (RegraNegocioException e) {
-			assertEquals("A data de início de venda deve ser inferior a data de fim", e.getMessage());
+			assertEquals("A data de inicio de venda deve ser inferior a data de fim", e.getMessage());
 		}
 	}
 	
