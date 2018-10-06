@@ -5,11 +5,11 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import model.impl.IngressoBackStage;
-import model.impl.IngressoPlateia;
-import model.impl.IngressoPlateiaVip;
-import model.impl.IngressoVip;
-import model.impl.TipoIngresso;
+import model.impl.ingressos.IngressoBackStage;
+import model.impl.ingressos.IngressoPlateia;
+import model.impl.ingressos.IngressoPlateiaVip;
+import model.impl.ingressos.IngressoVip;
+import model.impl.ingressos.TipoIngresso;
 
 public class IngressoTest {
 	

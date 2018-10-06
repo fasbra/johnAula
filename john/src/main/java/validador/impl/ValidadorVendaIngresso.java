@@ -8,7 +8,7 @@ import exception.CampoObrigatorioException;
 import exception.RegraNegocioException;
 import model.Ingresso;
 import model.impl.VendaIngresso;
-import model.impl.TipoIngresso;
+import model.impl.ingressos.TipoIngresso;
 import validador.Validador;
 
 public class ValidadorVendaIngresso implements Validador<VendaIngresso> {

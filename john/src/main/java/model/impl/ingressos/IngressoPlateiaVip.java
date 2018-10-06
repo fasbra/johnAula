@@ -1,4 +1,4 @@
-package model.impl;
+package model.impl.ingressos;
 
 public class IngressoPlateiaVip extends IngressoBase {
 

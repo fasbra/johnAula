@@ -11,9 +11,9 @@ import org.junit.Test;
 import exception.CampoObrigatorioException;
 import exception.RegraNegocioException;
 import model.Ingresso;
-import model.impl.IngressoPlateia;
-import model.impl.IngressoVip;
 import model.impl.VendaIngresso;
+import model.impl.ingressos.IngressoPlateia;
+import model.impl.ingressos.IngressoVip;
 import model.impl.ov.Periodo;
 import validador.impl.ValidadorVendaIngresso;;
 

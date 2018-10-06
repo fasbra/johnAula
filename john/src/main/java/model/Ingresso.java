@@ -1,6 +1,6 @@
 package model;
 
-import model.impl.TipoIngresso;
+import model.impl.ingressos.TipoIngresso;
 
 public interface Ingresso {
 	
