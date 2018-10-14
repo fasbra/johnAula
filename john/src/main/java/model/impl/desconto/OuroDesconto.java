@@ -5,7 +5,7 @@ import model.Desconto;
 public class OuroDesconto implements Desconto{
 
 	@Override
-	public double getDesconto() {
+	public double getPercentualDeDesconto() {
 
 		return 0.75;
 		

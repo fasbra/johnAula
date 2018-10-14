@@ -5,7 +5,7 @@ import model.Desconto;
 public class EstudanteDesconto implements Desconto {
 
 	@Override
-	public double getDesconto() {
+	public double getPercentualDeDesconto() {
 		return 0.5;
 	}
 	

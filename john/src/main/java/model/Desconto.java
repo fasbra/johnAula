@@ -2,6 +2,6 @@ package model;
 
 public interface Desconto {
 	
-	double getDesconto();
+	double getPercentualDeDesconto();
 	
 }
