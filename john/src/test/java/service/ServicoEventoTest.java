@@ -28,7 +28,7 @@ public class ServicoEventoTest {
 	}
 	
 	@Test
-	public void AsseguraAValidacaoESalvamentoQuandoCriarUmEvento() {
+	public void asseguraAValidacaoESalvamentoQuandoCriarUmEvento() {
 		Evento evento = new Evento();
 		
 		servico.create(evento);

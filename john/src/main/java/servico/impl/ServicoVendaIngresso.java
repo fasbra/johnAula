@@ -26,21 +26,19 @@ public class ServicoVendaIngresso {
 	public void create(VendaIngresso venda, List<Ingresso> ingressos) {
 		incluiVariosIngressos(venda, ingressos);
 		validador.valida(venda);
+		salva(venda);
 	}
 	
 	public void incluiVariosIngressos(VendaIngresso venda, List<Ingresso> ingressos) {
 		ingressos.forEach(ingresso -> incluiIngresso(venda, ingresso));
-		validador.valida(venda);
 	}
 	
 	public void incluiIngresso(VendaIngresso venda, Ingresso ingresso) {
 		venda.adicionaIngressoParaVenda(ingresso);
-		validador.valida(venda);
 	}
 	
 	public void informaPeriodoDeVenda(VendaIngresso venda, Periodo periodo) {
 		venda.informaPeriodoDeVenda(periodo);
-		validador.valida(venda);
 	}
 	
 	public void salva(VendaIngresso venda) {

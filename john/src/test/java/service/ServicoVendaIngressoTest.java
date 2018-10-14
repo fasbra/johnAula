@@ -52,22 +52,20 @@ public class ServicoVendaIngressoTest {
 	
 	@Test
 	public void asseguraAValidacaoESalvamentoQuandoCriarUmaVendaComTiposDeIngresso() {
-	/*
-		VendaIngresso venda = new VendaIngresso(periodo);
-		
-		//venda.informaEvento(evento);
+	
+		VendaIngresso venda = new VendaIngresso(periodo, evento);
 		servico.create(venda, ingressosParaVenda);
 		
 		verify(validador, times(1)).valida(venda);
 		verify(dao, times(1)).salvar(venda);
 		
 		assertEquals(venda.getIngressosDisponiveis().size() , ingressosParaVenda.size());
-		*/
+		
 	}
 	
 	@Test
 	public void asseguraAIncusaoDeNovosIngressosEValidaVenda() {
-		/*
+		
 		VendaIngresso venda = new VendaIngresso(periodo);
 		venda.informaEvento(evento);
 		
@@ -78,6 +76,6 @@ public class ServicoVendaIngressoTest {
 		
 		verify(validador,times(1)).valida(venda);
 		assertTrue(venda.getIngressosDisponiveis().contains(ingresso));
-		*/
+		
 	}
 }
