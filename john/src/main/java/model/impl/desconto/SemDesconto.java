@@ -5,9 +5,9 @@ import model.Desconto;
 public class SemDesconto implements Desconto {
 
 	@Override
-	public double getPercentualDeDesconto() {
+	public Double getPercentualDeDesconto() {
 
-		return 0;
+		return new Double(0);
 		
 	}
 

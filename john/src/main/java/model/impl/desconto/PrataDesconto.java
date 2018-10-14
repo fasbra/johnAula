@@ -5,9 +5,9 @@ import model.Desconto;
 public class PrataDesconto implements Desconto{
 
 	@Override
-	public double getPercentualDeDesconto() {
+	public Double getPercentualDeDesconto() {
 
-		return 0.6;
+		return new Double(0.6);
 		
 	}
 
