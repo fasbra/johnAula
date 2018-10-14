@@ -11,7 +11,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import dao.Dao;
 import model.impl.Evento;
 import servico.impl.ServicoEvento;
-import validador.Validador;;
+import validador.Validador;
 
 public class ServicoEventoTest {
 
