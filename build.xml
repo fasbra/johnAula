@@ -40,7 +40,7 @@
             </classpath>
             <batchtest fork="yes">
                 <fileset dir="${test.dir}">
-                    <include name="**/*Test*.java"/>
+                    <include name="**/*Test.java"/>
                 </fileset>
             </batchtest>
         </junit>
