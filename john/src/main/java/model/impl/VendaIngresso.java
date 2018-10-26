@@ -2,7 +2,6 @@ package model.impl;
 
 import model.impl.ov.Periodo;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

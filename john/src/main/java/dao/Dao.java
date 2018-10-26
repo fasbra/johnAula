@@ -3,9 +3,7 @@ package dao;
 import java.util.List;
 
 public interface Dao<T> {
-
-	public void salvar(T entidade);
-	public List<T> listarTudo();
-	public void deletar(T entidade);
-	
-}
+	void salvar(T entidade);
+	List<T> listarTudo();
+	void deletar(T entidade);
+	}

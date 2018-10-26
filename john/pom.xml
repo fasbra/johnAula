@@ -47,13 +47,13 @@
 
 	</dependencies>
 	<build>
-	 <sourceDirectory> src/main/java</sourceDirectory>
-       <testSourceDirectory> src/test/java</testSourceDirectory>
-        <resources>
-             <resource>
-                  <directory>resources</directory>
-             </resource>
-        </resources>  
+		<sourceDirectory> src/main/java</sourceDirectory>
+		<testSourceDirectory> src/test/java</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.evosuite.plugins</groupId>

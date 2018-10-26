@@ -8,5 +8,7 @@ public class ValidadorDescontoIngressoTest {
 	@Test
 	public void validaTeste() {
 		assertEquals(true, true);
+		
+		System.out.println("Print legal");
 	}
 }
